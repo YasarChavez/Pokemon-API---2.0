@@ -1,0 +1,41 @@
+body{
+    background: #EB5757;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #000000, #EB5757);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #000000, #EB5757); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: contain;
+}
+
+.container{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.resultado, .buscar , .lista{
+    margin-top: 20px;
+    display: flex;
+    max-width: 1000px;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.buscar label{
+    color: #f2f2f2;
+}
+.buscar button{
+    border-radius: 25px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px;
+}
+#botones button{
+    width: 100px;
+    border-radius: 25px;
+}
