@@ -42,11 +42,16 @@ background: linear-gradient(to right, #2c3e50, #bdc3c7);
     min-width: 200px;
     border-radius: 25px;
     box-shadow: 0px 0px 10px black;
-
+}
+.card h3{
+    font-size: 1.5em;
+}
+.card h5{
+    font-size: 1em;
 }
 .card img{
-    max-height: 96px;
-    max-width: 96px;
+    /* max-height: 96px;
+    max-width: 96px; */
     border-bottom: 1px solid black;
     border-top: 1px solid black;
     border-radius: 25px;
