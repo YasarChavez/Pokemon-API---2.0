@@ -49,7 +49,7 @@ async function imprimircuerpoPokemons() {
 
 // Buscar pokemon por el nombre del cuadro de busqueda
 async function pokemonbuscado() {
-    let nombrePokemon = document.getElementById("searchterm").value;
+    let nombrePokemon = document.getElementById("searchterm").value.toLowerCase();
     let url = `https://pokeapi.co/api/v2/pokemon/${nombrePokemon}`;
     let respuesta = await fetch(url);
     let datos = await respuesta.json();
