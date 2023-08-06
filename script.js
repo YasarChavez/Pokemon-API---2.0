@@ -1,5 +1,7 @@
 const $mas = document.getElementById("mas");
 const $menos = document.getElementById("menos");
+const $masdiez = document.getElementById("masdiez");
+const $menosdiez = document.getElementById("menosdiez");
 const $busqueda = document.getElementById("busqueda");
 var numeroPokemon = 1;
 
@@ -74,6 +76,24 @@ $mas.addEventListener("click", () => {
 $menos.addEventListener("click", () => {
     if (numeroPokemon > 1){
         numeroPokemon--;
+    }else if (numeroPokemon == 1){
+        alert("No hay pokemones anteriores para mostrar, te encuentras en el primero.");
+    }
+    imprimircuerpoPokemons(numeroPokemon);
+});
+
+$masdiez.addEventListener("click", () =>{
+    if (numeroPokemon < 1010){
+        numeroPokemon += 10;
+    }else{
+        alert("No hay más pokemones para mostrar.");
+    }
+    imprimircuerpoPokemons(numeroPokemon);
+});
+
+$menosdiez.addEventListener("click", () => {
+    if (numeroPokemon > 1){
+        numeroPokemon -= 10;
     }else if (numeroPokemon == 1){
         alert("No hay pokemones anteriores para mostrar, te encuentras en el primero.");
     }

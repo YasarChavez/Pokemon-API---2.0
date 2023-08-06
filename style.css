@@ -59,7 +59,7 @@ background: linear-gradient(to right, #2c3e50, #bdc3c7);
     background-color: #f2f2f2;
 }
 .card img:hover{
-    transform: scale(1.5);
+    transform: scale(1.05);
     transition: transform 0.7s;
     box-shadow: 0px 0px 30px rgb(255, 226, 64);
 }
@@ -67,8 +67,14 @@ background: linear-gradient(to right, #2c3e50, #bdc3c7);
     border-radius: 25px;
     text-align: center;
 }
-#botones button{
+#botones #menos,
+#botones #mas{
     width: 100px;
+    border-radius: 25px;
+}
+
+#botones #menosdiez,
+#botones #masdiez{
     border-radius: 25px;
 }
 button:hover{
