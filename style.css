@@ -41,6 +41,8 @@ background: linear-gradient(to right, #2c3e50, #bdc3c7);
     justify-content: space-around;
     min-width: 200px;
     border-radius: 25px;
+    border-top: 3px solid black;
+    border-bottom: 2px solid black;
     box-shadow: 0px 0px 10px black;
 }
 .card h3{
@@ -50,18 +52,18 @@ background: linear-gradient(to right, #2c3e50, #bdc3c7);
     font-size: 1em;
 }
 .card img{
-    /* max-height: 96px;
-    max-width: 96px; */
-    border-bottom: 1px solid black;
-    border-top: 1px solid black;
-    border-radius: 25px;
-    box-shadow: 0px 0px 10px black;
+    /* max-height: 96px; */
+    max-width: 180px;
     background-color: #f2f2f2;
+    border-radius: 25px;
+    border-top: 3px solid black;
+    border-bottom: 2px solid black;
+    box-shadow: 0px 0px 10px black;
 }
 .card img:hover{
     transform: scale(1.05);
     transition: transform 0.7s;
-    box-shadow: 0px 0px 30px rgb(255, 226, 64);
+    box-shadow: 0px 0px 30px rgb(128, 128, 127);
 }
 #searchterm{
     border-radius: 25px;

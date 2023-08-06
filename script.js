@@ -60,6 +60,7 @@ async function pokemonbuscado(){
     <h5>ID: ${datos.id}</h5>
     </div>
     `;
+    numeroPokemon = datos.id;
 }
 
 imprimircuerpoPokemons(numeroPokemon);
