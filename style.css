@@ -74,7 +74,8 @@ background: linear-gradient(to right, #2c3e50, #bdc3c7);
 }
 
 #botones #menosdiez,
-#botones #masdiez{
+#botones #masdiez,
+#busqueda{
     border-radius: 25px;
 }
 button:hover{
