@@ -1,5 +1,6 @@
 const $mas = document.getElementById("mas");
 const $menos = document.getElementById("menos");
+const $busqueda = document.getElementById("busqueda");
 var numeroPokemon = 1;
 
 async function conectar(url) {
@@ -24,9 +25,32 @@ async function imprimircuerpoPokemons() {
     // console.log("datos :>> ", datos);
     let datos = await buscarPokemon();
     console.log("datos :>> ", datos);
+    //nombre primera letra mayusculas
+    let nombre = datos.name[0].toUpperCase() + datos.name.slice(1)
+    // 
     document.getElementById("lista").innerHTML =`
     <div class="card" id="card">
-    <h3>${datos.name.toUpperCase()}</h3>
+    <h3>${nombre}</h3>
+    <img src="${datos.sprites.front_default}" class="card-img-top" alt="...">
+    <h5>Altura: ${datos.height}</h5>
+    <h5>Peso: ${datos.weight}</h5>
+    <h5>Tipo: ${datos.types[0].type.name}</h5>
+    <h5>ID: ${datos.id}</h5>
+    </div>
+    `;
+}
+
+async function pokemonbuscado(){
+    let nombrePokemon = document.getElementById("searchterm").value;
+    let url = `https://pokeapi.co/api/v2/pokemon/${nombrePokemon}`;
+    let respuesta = await fetch(url);
+    let datos = await respuesta.json();
+    //nombre primera letra mayusculas
+    let nombre = datos.name[0].toUpperCase() + datos.name.slice(1)
+    // 
+    document.getElementById("lista").innerHTML =`
+    <div class="card" id="card">
+    <h3>${nombre}</h3>
     <img src="${datos.sprites.front_default}" class="card-img-top" alt="...">
     <h5>Altura: ${datos.height}</h5>
     <h5>Peso: ${datos.weight}</h5>
@@ -39,7 +63,7 @@ async function imprimircuerpoPokemons() {
 imprimircuerpoPokemons(numeroPokemon);
 
 $mas.addEventListener("click", () => {
-    if (numeroPokemon < 1282){
+    if (numeroPokemon < 1010){
         numeroPokemon++;
     }else{
         alert("No hay más pokemones para mostrar.");
@@ -54,4 +78,9 @@ $menos.addEventListener("click", () => {
         alert("No hay pokemones anteriores para mostrar, te encuentras en el primero.");
     }
     imprimircuerpoPokemons(numeroPokemon);
+});
+
+$busqueda.addEventListener("click", () =>{
+    pokemonbuscado();
+    document.getElementById("searchterm").value = "";
 });
