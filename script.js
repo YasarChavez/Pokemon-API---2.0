@@ -106,11 +106,11 @@ $masdiez.addEventListener("click", () => {
 
 // Restar 10 al numeroPokemon
 $menosdiez.addEventListener("click", () => {
-    if (numeroPokemon > 1) {
+    if (numeroPokemon > 11) {
         numeroPokemon -= 10;
-    } else if (numeroPokemon == 1) {
+    } else{
         alert(
-            "No hay pokemones anteriores para mostrar, te encuentras en el primero."
+            `No puedes restar más pokemones para mostrar, te encuentras en el ${numeroPokemon}.`
         );
     }
     imprimircuerpoPokemons(numeroPokemon);
