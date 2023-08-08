@@ -110,7 +110,7 @@ $menosdiez.addEventListener("click", () => {
         numeroPokemon -= 10;
     } else{
         alert(
-            `No puedes restar más pokemones para mostrar, te encuentras en el ${numeroPokemon}.`
+            `No puedes restar 10 pokemones te encuentras en el ${numeroPokemon}.`
         );
     }
     imprimircuerpoPokemons(numeroPokemon);
