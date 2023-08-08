@@ -106,7 +106,7 @@ $masdiez.addEventListener("click", () => {
 
 // Restar 10 al numeroPokemon
 $menosdiez.addEventListener("click", () => {
-    if (numeroPokemon > 11) {
+    if (numeroPokemon > 10) {
         numeroPokemon -= 10;
     } else{
         alert(
