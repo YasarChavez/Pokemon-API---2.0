@@ -97,11 +97,11 @@ $menos.addEventListener("click", () => {
 // Sumar 10 al numeroPokemon
 $masdiez.addEventListener("click", () => {
   ///Encontró el error Diego
-  if (numeroPokemon <1001) {
-    numeroPokemon += 10;
-  }
   if(numeroPokemon >= 1001){
     alert(`No puedes sumar 10 pokemones te encuentras en el ${numeroPokemon}.`);
+  }
+  if (numeroPokemon <1001) {
+    numeroPokemon += 10;
   }
   if(numeroPokemon==1010){
     alert("No hay más pokemones para mostrar")
